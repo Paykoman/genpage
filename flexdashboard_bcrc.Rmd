@@ -63,7 +63,9 @@ timestamp <- as.numeric(Sys.time())
 cat("
 <script>
 $(document).ready(function(){
-  $('.navbar-author').after('</br><span id=", '"updatedat"', ">Updated: <span data-livestamp=", '"', timestamp, '"', "></span></span>');
+  $('.navbar-author')
+    .after('</br><span id=\"updatedat\">Updated: 
+    <span data-livestamp=\"", timestamp, "\"></span></span>');
 });
 </script>
 ", sep = "")
@@ -127,7 +129,7 @@ ggplot(X, aes(x_label, N, fill = market)) +
 ### Listing distribution over time
 ```{r}
 # Is there enough data?
-.hours_ago <- 5
+.hours_ago <- 12
 .data_dates <- DTE[order(data_date), unique(data_date)]
 .data_date_now <- .data_dates[length(.data_dates)]
 .data_date_after <- .data_dates[!(.data_dates %in% .data_date_now)]
