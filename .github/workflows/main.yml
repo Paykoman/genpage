@@ -53,7 +53,7 @@ jobs:
       uses: GuillaumeFalourd/git-commit-push@v1.3
       with:
         target_branch: main
-        files: bcrc.html mocossi.html sac.html chilledkongs.html
+        files: bcrc.html mocossi.html sac.html chilledkongs.html borgs.html
         remote_repository: https://github.com/cnftstats/cnftstats.github.io
         access_token: ${{ secrets.API_TOKEN_GITHUB }}
         force: true
